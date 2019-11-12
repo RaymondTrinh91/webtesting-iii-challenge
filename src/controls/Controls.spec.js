@@ -67,6 +67,7 @@ test('Checking if Gate can be opened if locked, and buttons should be disabled w
     fireEvent.click(lockedBtn)
     expect(gateDoor.textContent).toBe('Open Gate')
     expect(doorDisplay.textContent).toBe('Closed')
+    expect(lockedBtn.disabled).toBe(false)
     fireEvent.click(gateDoor)
     expect(gateDoor.disabled).toBe(true)
     expect(doorDisplay.textContent).toBe('Closed')
